@@ -1,0 +1,2762 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class ByteSize - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#class-ByteSize-label-Examples+of+use">Examples of use</a>
+    <li><a href="#class-ByteSize-label-Conversion+of+values-3A">Conversion of values:</a>
+    <li><a href="#class-ByteSize-label-With+numeric+convenience+methods-3A">With numeric convenience methods:</a>
+  </ul>
+</div>
+
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    <div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Comparable</span>
+  
+  
+  </ul>
+</div>
+
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-bytes">::bytes</a>
+    
+    <li ><a href="#method-c-eb">::eb</a>
+    
+    <li ><a href="#method-c-eib">::eib</a>
+    
+    <li ><a href="#method-c-gb">::gb</a>
+    
+    <li ><a href="#method-c-gib">::gib</a>
+    
+    <li ><a href="#method-c-kb">::kb</a>
+    
+    <li ><a href="#method-c-kib">::kib</a>
+    
+    <li ><a href="#method-c-mb">::mb</a>
+    
+    <li ><a href="#method-c-mib">::mib</a>
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-c-parse">::parse</a>
+    
+    <li ><a href="#method-c-pb">::pb</a>
+    
+    <li ><a href="#method-c-pib">::pib</a>
+    
+    <li ><a href="#method-c-tb">::tb</a>
+    
+    <li ><a href="#method-c-tib">::tib</a>
+    
+    <li ><a href="#method-c-yb">::yb</a>
+    
+    <li ><a href="#method-c-yib">::yib</a>
+    
+    <li ><a href="#method-c-zb">::zb</a>
+    
+    <li ><a href="#method-c-zib">::zib</a>
+    
+    <li ><a href="#method-i-25">#%</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2A-2A">#**</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2B-40">#+@</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-2D-40">#-@</a>
+    
+    <li ><a href="#method-i-2F">#/</a>
+    
+    <li ><a href="#method-i-3C">#&lt;</a>
+    
+    <li ><a href="#method-i-3C-3D">#&lt;=</a>
+    
+    <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li ><a href="#method-i-3D-3D">#==</a>
+    
+    <li ><a href="#method-i-3D-3D-3D">#===</a>
+    
+    <li ><a href="#method-i-3E">#&gt;</a>
+    
+    <li ><a href="#method-i-3E-3D">#&gt;=</a>
+    
+    <li ><a href="#method-i-bytes">#bytes</a>
+    
+    <li ><a href="#method-i-eql-3F">#eql?</a>
+    
+    <li ><a href="#method-i-inspect">#inspect</a>
+    
+    <li ><a href="#method-i-negative-3F">#negative?</a>
+    
+    <li ><a href="#method-i-positive-3F">#positive?</a>
+    
+    <li ><a href="#method-i-to_bytes">#to_bytes</a>
+    
+    <li ><a href="#method-i-to_eb">#to_eb</a>
+    
+    <li ><a href="#method-i-to_eib">#to_eib</a>
+    
+    <li ><a href="#method-i-to_gb">#to_gb</a>
+    
+    <li ><a href="#method-i-to_gib">#to_gib</a>
+    
+    <li ><a href="#method-i-to_i">#to_i</a>
+    
+    <li ><a href="#method-i-to_iec">#to_iec</a>
+    
+    <li ><a href="#method-i-to_kb">#to_kb</a>
+    
+    <li ><a href="#method-i-to_kib">#to_kib</a>
+    
+    <li ><a href="#method-i-to_mb">#to_mb</a>
+    
+    <li ><a href="#method-i-to_mib">#to_mib</a>
+    
+    <li ><a href="#method-i-to_pb">#to_pb</a>
+    
+    <li ><a href="#method-i-to_pib">#to_pib</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+    <li ><a href="#method-i-to_si">#to_si</a>
+    
+    <li ><a href="#method-i-to_tb">#to_tb</a>
+    
+    <li ><a href="#method-i-to_tib">#to_tib</a>
+    
+    <li ><a href="#method-i-to_yb">#to_yb</a>
+    
+    <li ><a href="#method-i-to_yib">#to_yib</a>
+    
+    <li ><a href="#method-i-to_zb">#to_zb</a>
+    
+    <li ><a href="#method-i-to_zib">#to_zib</a>
+    
+    <li ><a href="#method-i-zero-3F">#zero?</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-ByteSize">
+  <h1 id="class-ByteSize" class="class">
+    class ByteSize
+  </h1>
+
+  <section class="description">
+    
+<p>This class is used to represent a size in bytes.</p>
+
+<p>It uses the <a
+href="https://en.wikipedia.org/wiki/International_System_of_Units">SI</a>
+standard unit symbols: kB, MB, GB, TB, PB, EB, ZB, YB.</p>
+
+<p>For a version that uses the <a
+href="https://en.wikipedia.org/wiki/ISO/IEC_80000">IEC</a> standard unit
+symbols, see <em><a href="IECByteSize.html">IECByteSize</a></em>.</p>
+
+<h3 id="class-ByteSize-label-Examples+of+use">Examples of use<span><a href="#class-ByteSize-label-Examples+of+use">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value">4127</span> )          <span class="ruby-comment">#=&gt; (4.13 kB)</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;22 GB&quot;</span> )   <span class="ruby-comment">#=&gt; (22 GB)</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">new</span>( <span class="ruby-string">&quot;22 GiB&quot;</span> )  <span class="ruby-comment">#=&gt; (23.62 GB)</span>
+
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">bytes</span>( <span class="ruby-value">42</span> )          <span class="ruby-comment">#=&gt; (42 bytes)</span>
+
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">kb</span>( <span class="ruby-value">42</span> )            <span class="ruby-comment">#=&gt; (42 kB)</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">mb</span>( <span class="ruby-value">42</span> )            <span class="ruby-comment">#=&gt; (42 MB)</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">gb</span>( <span class="ruby-value">42</span> )            <span class="ruby-comment">#=&gt; (42 GB)</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">tb</span>( <span class="ruby-value">42</span> )            <span class="ruby-comment">#=&gt; (42 TB)</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">pb</span>( <span class="ruby-value">42</span> )            <span class="ruby-comment">#=&gt; (42 PB)</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">eb</span>( <span class="ruby-value">42</span> )            <span class="ruby-comment">#=&gt; (42 EB)</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">zb</span>( <span class="ruby-value">42</span> )            <span class="ruby-comment">#=&gt; (42 ZB)</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">yb</span>( <span class="ruby-value">42</span> )            <span class="ruby-comment">#=&gt; (42 YB)</span>
+</pre>
+
+<h3 id="class-ByteSize-label-Conversion+of+values-3A">Conversion of values:<span><a href="#class-ByteSize-label-Conversion+of+values-3A">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">gb</span>( <span class="ruby-value">100</span> ).<span class="ruby-identifier">to_gib</span>   <span class="ruby-comment">#=&gt; 93.13225746154785</span>
+
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">gib</span>( <span class="ruby-value">2.42</span> ).<span class="ruby-identifier">to_mib</span>  <span class="ruby-comment">#=&gt; 2478.079999923706</span>
+</pre>
+
+<h3 id="class-ByteSize-label-With+numeric+convenience+methods-3A">With numeric convenience methods:<span><a href="#class-ByteSize-label-With+numeric+convenience+methods-3A">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;bytesize/unit&#39;</span>
+
+<span class="ruby-value">100</span>.<span class="ruby-identifier">gb</span>.<span class="ruby-identifier">to_gib</span>       <span class="ruby-comment">#=&gt; 93.13225746154785</span>
+
+<span class="ruby-value">2.42</span>.<span class="ruby-identifier">gib</span>.<span class="ruby-identifier">to_mib</span>  <span class="ruby-comment">#=&gt; 2478.079999923706</span>
+</pre>
+
+<p><a href="ByteSize.html">ByteSize</a></p>
+
+<p>version.rb</p>
+
+<p>© 2018 Adam Hunt Created: 2018-03-24 Modified: 2018-03-24</p>
+
+  </section>
+
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="ALL_UNIT_SYMBOLS">ALL_UNIT_SYMBOLS
+        
+        <dd>
+        
+      
+        <dt id="BASE">BASE
+        
+        <dd>
+        
+      
+        <dt id="ORDERS_OF_MAGNITUDE">ORDERS_OF_MAGNITUDE
+        
+        <dd>
+        
+      
+        <dt id="UNIT_SYMBOLS">UNIT_SYMBOLS
+        
+        <dd>
+        
+      
+        <dt id="VERSION">VERSION
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-bytes" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytes( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> bytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bytes-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">bytes</span>( <span class="ruby-identifier">b</span> )
+        <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;expected #{Numeric}, got #{b.class}&quot;</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">b</span>.<span class="ruby-identifier">round</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-eb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            eb( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> exabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="eb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 219</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-eib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            eib( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> exbibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="eib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 299</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-gb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            gb( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> gigabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="gb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 189</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-gib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            gib( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> gibibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="gib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 269</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-kb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            kb( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> kilobytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="kb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 169</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-kib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            kib( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> kibibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="kib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 249</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-mb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mb( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> megabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 179</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-mib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            mib( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> mebibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="mib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 259</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            new( integer )
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            new( string )
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Create a new instance of <a href="ByteSize.html">ByteSize</a> from an <a
+href="https://ruby-doc.org/core/Integer.html">Integer</a> or <a
+href="https://ruby-doc.org/core/String.html">String</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 381</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>( <span class="ruby-identifier">bytes</span> )
+        <span class="ruby-ivar">@bytes</span> = <span class="ruby-identifier">bytes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-parse" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            parse( string )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Parses a <a href="https://ruby-doc.org/core/String.html">String</a> into
+either a <a href="ByteSize.html">ByteSize</a> or <a
+href="IECByteSize.html">IECByteSize</a> depending on it&#39;s unit symbol.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="parse-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 326</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">parse</span>( <span class="ruby-identifier">val</span> )
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">m</span> = <span class="ruby-identifier">val</span>.<span class="ruby-identifier">match</span>(<span class="ruby-constant">BYTES_REGEX</span>)
+                        <span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span> )
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">m</span> = <span class="ruby-identifier">val</span>.<span class="ruby-identifier">match</span>(<span class="ruby-constant">SI_REGEX</span>)
+                        <span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">send</span>( <span class="ruby-identifier">m</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">m</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_f</span> )
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">m</span> = <span class="ruby-identifier">val</span>.<span class="ruby-identifier">match</span>(<span class="ruby-constant">IEC_REGEX</span>)
+                        <span class="ruby-constant">IECByteSize</span>.<span class="ruby-identifier">send</span>( <span class="ruby-identifier">m</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">m</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_f</span> )
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">raise</span>( <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;invalid #{ByteSize} or #{IECByteSize} string: #{val.inspect}&quot;</span> )
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;expected #{String}, got #{val.class}&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-pb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            pb( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> petabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="pb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 209</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-pib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            pib( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> pebibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="pib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 289</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-tb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tb( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> terabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 199</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-tib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            tib( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> tebibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 279</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-yb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yb( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> yottabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 239</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-yib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            yib( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> yobibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="yib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 319</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-zb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            zb( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> zettabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="zb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 229</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-zib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            zib( n )  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a new instance of <a href="ByteSize.html">ByteSize</a> representing
+<em>n</em> zebibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="zib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 309</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-25" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize % val  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs a modulo operation with <em>val</em>, returning an instance of <a
+href="ByteSize.html">ByteSize</a>.</p>
+
+<p><em>val</em> can be another <a href="ByteSize.html">ByteSize</a> or a <a
+href="https://ruby-doc.org/core/Numeric.html">Numeric</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="25-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 643</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">%</span>( <span class="ruby-identifier">val</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">val</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(( <span class="ruby-identifier">bytes</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">val</span> ).<span class="ruby-identifier">round</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">bytes</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">bytes</span> )
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{val.class} can&#39;t be coerced into #{self.class}&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize * val  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs multiplication, returning an instance of <a
+href="ByteSize.html">ByteSize</a>.</p>
+
+<p><em>val</em> must be a <a
+href="https://ruby-doc.org/core/Numeric.html">Numeric</a>. Multiplication
+with another <a href="ByteSize.html">ByteSize</a> is disallowed because it
+does not make symantic sense.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 668</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">*</span>( <span class="ruby-identifier">val</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">val</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(( <span class="ruby-identifier">bytes</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">val</span> ).<span class="ruby-identifier">round</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;cannot multiply #{ByteSize} with #{val.class}&quot;</span> )
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{val.class} can&#39;t be coerced into #{self.class}&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-2A-2A" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize ** pow  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Raises <em>bytesize</em> to the power of <em>pow</em>, returning an
+instance of <a href="ByteSize.html">ByteSize</a>.</p>
+
+<p><em>pow</em> must be a <a
+href="https://ruby-doc.org/core/Numeric.html">Numeric</a>. Raising to the
+power of another <a href="ByteSize.html">ByteSize</a> is disallowed because
+it does not make symantic sense.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-2A-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 693</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">**</span>( <span class="ruby-identifier">pow</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">pow</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(( <span class="ruby-identifier">bytes</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">pow</span> ).<span class="ruby-identifier">round</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;cannot raise #{ByteSize} to a power of #{pow.class}&quot;</span> )
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{pow.class} can&#39;t be coerced into #{self.class}&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize + val  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs addition, returning an instance of <a
+href="ByteSize.html">ByteSize</a>.</p>
+
+<p><em>val</em> can be another <a href="ByteSize.html">ByteSize</a> or a <a
+href="https://ruby-doc.org/core/Numeric.html">Numeric</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 717</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">+</span>( <span class="ruby-identifier">val</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">val</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(( <span class="ruby-identifier">bytes</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span> ).<span class="ruby-identifier">round</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">bytes</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">bytes</span> )
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{val.class} can&#39;t be coerced into #{self.class}&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-2B-40" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            +bytesize  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Unary Plus — Returns the receiver’s value.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-40-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 739</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">+@</span>
+        <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize - val  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs subtraction, returning an instance of <a
+href="ByteSize.html">ByteSize</a>.</p>
+
+<p><em>val</em> can be another <a href="ByteSize.html">ByteSize</a> or a <a
+href="https://ruby-doc.org/core/Numeric.html">Numeric</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 753</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">-</span>( <span class="ruby-identifier">val</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">val</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(( <span class="ruby-identifier">bytes</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">val</span> ).<span class="ruby-identifier">round</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>( <span class="ruby-identifier">bytes</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">bytes</span> )
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{val.class} can&#39;t be coerced into #{self.class}&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-2D-40" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            -bytesize  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Unary Minus — Returns the receiver’s value, negated.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-40-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 775</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">-@</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value">0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">bytes</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-2F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize / val  &rarr;  bytesize or float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Performs division.</p>
+
+<p>If <em>val</em> is a <a
+href="https://ruby-doc.org/core/Numeric.html">Numeric</a> it returns an
+instance of <a href="ByteSize.html">ByteSize</a>. If <em>val</em> is an
+instance of <a href="ByteSize.html">ByteSize</a> it returns a <a
+href="https://ruby-doc.org/core/Float.html">Float</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2F-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 792</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">/</span>( <span class="ruby-identifier">val</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">val</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(( <span class="ruby-identifier">bytes</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">val</span> ).<span class="ruby-identifier">round</span>)
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">to_f</span>
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;#{val.class} can&#39;t be coerced into #{self.class}&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-3C" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize &lt; val  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if the value of <em>bytesize</em> is less than
+that of <em>val</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3C-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 553</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;</span>( <span class="ruby-identifier">other</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">other</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">bytes</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">other</span>
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;comparison of #{self.class} with #{other.inspect} failed&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-3C-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize &lt;= val  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if the value of <em>bytesize</em> is less than or
+equal to that of <em>val</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3C-3D-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 575</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=</span>( <span class="ruby-identifier">other</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">other</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">bytes</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">other</span>
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;comparison of #{self.class} with #{other.inspect} failed&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize &lt;=&gt; other  &rarr;  -1, 0, 1, or nil
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Compares <em>bytesize</em> to <em>other</em> and returns <code>0</code> if
+they are equal, <code>-1</code> if <em>bytesize</em> is less than
+<em>other</em>, or <code>1</code> if <em>bytesize</em> is greater than
+<em>other</em>.</p>
+
+<p>Returns <code>nil</code> if the two values are incomparable.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 818</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&lt;=&gt;</span>( <span class="ruby-identifier">other</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">other</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">bytes</span>
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-3D-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize == other  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if <em>bytesize</em> is equal to <em>other</em>.</p>
+
+<p>If <em>other</em> is not an instance of <a
+href="ByteSize.html">ByteSize</a> an attempt will be made to convert it to
+one.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3D-3D-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 842</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">==</span>( <span class="ruby-identifier">other</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">other</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">bytes</span>
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-3D-3D-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize === other  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Alias for<em> <a href="#method-i-3D-3D">==</a></em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3D-3D-3D-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 866</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-3E" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize &gt; val  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if the value of <em>bytesize</em> is greater than
+that of <em>val</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3E-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 597</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&gt;</span>( <span class="ruby-identifier">other</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">other</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">bytes</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">other</span>
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;comparison of #{self.class} with #{other.inspect} failed&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-3E-3D" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytesize &gt;= val  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if the value of <em>bytesize</em> is greater than
+or equal to that of <em>val</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3E-3D-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 619</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">&gt;=</span>( <span class="ruby-identifier">other</span> )
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">other</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">ByteSize</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">bytes</span>
+                
+                <span class="ruby-keyword">when</span> <span class="ruby-constant">Numeric</span>
+                <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">other</span>
+                
+        <span class="ruby-keyword">else</span> 
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;comparison of #{self.class} with #{other.inspect} failed&quot;</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bytes" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            bytes  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the number of bytes as an <a
+href="https://ruby-doc.org/core/Integer.html">Integer</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bytes-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 880</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-eql-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            eql?( other_bytesize )  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if the <a href="ByteSize.html">ByteSize</a> is
+equal to <em>other_bytesize</em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="eql-3F-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 908</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">eql?</span>( <span class="ruby-identifier">other</span> )
+        <span class="ruby-identifier">other</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">bytes</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">bytes</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-inspect" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            inspect  &rarr;  string
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Return a <a href="https://ruby-doc.org/core/String.html">String</a>
+describing this object.</p>
+
+<h6 id="method-i-inspect-label-Example-3A">Example:<span><a href="#method-i-inspect-label-Example-3A">&para;</a> <a href="#top">&uarr;</a></span></h6>
+
+<pre class="ruby"><span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">bytes</span>(<span class="ruby-value">3000000000000</span>)  <span class="ruby-comment">#=&gt; (3 TB)</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="inspect-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 932</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">inspect</span>
+        <span class="ruby-identifier">sprintf</span>( <span class="ruby-string">&#39;(%s)&#39;</span>, <span class="ruby-identifier">to_s</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-negative-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            negative?  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if the <a href="ByteSize.html">ByteSize</a> is
+less than <code>0</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="negative-3F-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 944</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">negative?</span>
+        <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-positive-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            positive?  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if the <a href="ByteSize.html">ByteSize</a> is
+greater than <code>0</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="positive-3F-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 956</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">positive?</span>
+        <span class="ruby-identifier">bytes</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_bytes" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_bytes  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Alias for<em> <a href="ByteSize.html#method-i-bytes">bytes</a></em>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_bytes-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 970</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_eb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_eb  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of exabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_eb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 447</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_eib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_eib  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of exbibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_eib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 527</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_gb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_gb  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of gigabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_gb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 417</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_gib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_gib  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of gibibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_gib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 497</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_i" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_i  &rarr;  integer
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the number of bytes as an <a
+href="https://ruby-doc.org/core/Integer.html">Integer</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_i-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 982</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_i</span>
+        <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_iec" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_iec  &rarr;  iecbytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the size as an instance of <a
+href="IECByteSize.html">IECByteSize</a>.</p>
+
+<p>If called on an instance of <a href="IECByteSize.html">IECByteSize</a> it
+returns <code>self</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_iec-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 996</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_iec</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">IECByteSize</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">:</span> <span class="ruby-constant">IECByteSize</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_i</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_kb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_kb  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of kilobytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_kb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 397</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_kib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_kib  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of kibibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_kib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 477</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_mb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_mb  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of megabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_mb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 407</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_mib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_mib  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of mebibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_mib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 487</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_pb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_pb  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of petabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_pb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 437</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_pib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_pib  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of pebibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_pib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 517</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_s  &rarr;  string
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_s( decimal_places )  &rarr;  string
+          </span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Format this <a href="ByteSize.html">ByteSize</a> as a <a
+href="https://ruby-doc.org/core/String.html">String</a>.</p>
+
+<p>The second form formats it with exactly <em>decimal_places</em> decimal
+places.</p>
+
+<h6 id="method-i-to_s-label-Example-3A">Example:<span><a href="#method-i-to_s-label-Example-3A">&para;</a> <a href="#top">&uarr;</a></span></h6>
+
+<pre class="ruby"><span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">bytes</span>(<span class="ruby-value">3000000000000</span>).<span class="ruby-identifier">to_s</span>  <span class="ruby-comment">#=&gt; &quot;3 TB&quot;</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">bytes</span>(<span class="ruby-value">2460000000000</span>).<span class="ruby-identifier">to_s</span>  <span class="ruby-comment">#=&gt; &quot;2.46 TB&quot;</span>
+
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">bytes</span>(<span class="ruby-value">3000000000000</span>).<span class="ruby-identifier">to_s</span>(<span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; &quot;3.00 TB&quot;</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">bytes</span>(<span class="ruby-value">1234567890000</span>).<span class="ruby-identifier">to_s</span>(<span class="ruby-value">2</span>)  <span class="ruby-comment">#=&gt; &quot;1.23 TB&quot;</span>
+<span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">bytes</span>(<span class="ruby-value">1234567890000</span>).<span class="ruby-identifier">to_s</span>(<span class="ruby-value">4</span>)  <span class="ruby-comment">#=&gt; &quot;1.2346 TB&quot;</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 1020</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>( <span class="ruby-identifier">decimal_places</span>=<span class="ruby-keyword">nil</span> )
+        <span class="ruby-keyword">unless</span> <span class="ruby-identifier">decimal_places</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;expected #{Integer}, got #{decimal_places.class}&quot;</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">decimal_places</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>)
+                <span class="ruby-identifier">raise</span>( <span class="ruby-constant">RangeError</span>, <span class="ruby-string">&quot;decimal places cannot be negative&quot;</span> ) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">decimal_places</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-identifier">b</span> = <span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">abs</span>
+        
+        <span class="ruby-identifier">scale</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">ORDERS_OF_MAGNITUDE</span>.<span class="ruby-identifier">sort</span>{<span class="ruby-operator">|</span>(<span class="ruby-identifier">ak</span>,<span class="ruby-identifier">av</span>),(<span class="ruby-identifier">bk</span>,<span class="ruby-identifier">bv</span>)<span class="ruby-operator">|</span> <span class="ruby-identifier">av</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">bv</span> }
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">b</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">unit</span> = <span class="ruby-identifier">scale</span>.<span class="ruby-identifier">first</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">unit</span> = <span class="ruby-identifier">scale</span>.<span class="ruby-identifier">find_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">b</span> }
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">unit</span>.<span class="ruby-identifier">nil?</span>
+                        <span class="ruby-identifier">unit</span> = <span class="ruby-identifier">scale</span>.<span class="ruby-identifier">last</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">unit</span> = <span class="ruby-identifier">scale</span>[<span class="ruby-identifier">unit</span><span class="ruby-value">-1</span>]
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">decimal_places</span>.<span class="ruby-identifier">nil?</span>
+                <span class="ruby-identifier">sprintf</span>( <span class="ruby-identifier">negative?</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;-%g %s&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;%g %s&#39;</span>, ((<span class="ruby-identifier">b</span><span class="ruby-operator">/</span><span class="ruby-constant">Float</span>(<span class="ruby-identifier">unit</span>.<span class="ruby-identifier">last</span>))<span class="ruby-operator">*</span><span class="ruby-value">100</span>).<span class="ruby-identifier">round</span><span class="ruby-operator">/</span><span class="ruby-value">100.0</span>, <span class="ruby-identifier">unit</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span> )
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">sprintf</span>( <span class="ruby-identifier">negative?</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;-%.0#{decimal_places}f %s&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;%.0#{decimal_places}f %s&quot;</span>, <span class="ruby-identifier">b</span> <span class="ruby-operator">/</span> <span class="ruby-constant">Float</span>(<span class="ruby-identifier">unit</span>.<span class="ruby-identifier">last</span>), <span class="ruby-identifier">unit</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">to_s</span> )
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_si" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_si  &rarr;  bytesize
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns the size as an instance of <a href="ByteSize.html">ByteSize</a>.</p>
+
+<p>If called on an instance of <a href="ByteSize.html">ByteSize</a> it returns
+<code>self</code>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_si-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 1058</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_si</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ByteSize</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">self</span> <span class="ruby-operator">:</span> <span class="ruby-constant">ByteSize</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_i</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_tb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_tb  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of terabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_tb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 427</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_tib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_tib  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of tebibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_tib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 507</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_yb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_yb  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of yottabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_yb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 467</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_yib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_yib  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of yobibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_yib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 547</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_zb" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_zb  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of zettabytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_zb-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 457</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-to_zib" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            to_zib  &rarr;  float
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns a <a href="https://ruby-doc.org/core/Float.html">Float</a>
+representing the equivalent number of zebibytes.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_zib-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 537</span>
+        </pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-zero-3F" class="method-detail ">
+        
+        
+        <div class="method-heading">
+          <span class="method-callseq">
+            zero?  &rarr;  true or false
+          </span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+        
+
+        <div class="method-description">
+          
+          <p>Returns <code>true</code> if the <a href="ByteSize.html">ByteSize</a> has a
+zero value.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="zero-3F-source">
+            <pre><span class="ruby-comment"># File lib/bytesize.rb, line 1070</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">zero?</span>
+        <span class="ruby-identifier">bytes</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
