@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright © 2018 Adam Hunt
+Copyright © 2018-2021 Adam Hunt
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
