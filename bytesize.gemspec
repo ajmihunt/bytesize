@@ -8,7 +8,7 @@
 #
 # © 2018-2021 Adam Hunt
 # Created: 2018-03-24
-# Modified: 2021-05-13
+# Modified: 2021-06-01
 #
 
 
@@ -48,7 +48,7 @@ Gem::Specification.new do |gem|
 
 	gem.required_ruby_version = '>= 2.1.0'
 
-	gem.add_development_dependency 'bundler', '>= 2.1.0'
+	gem.add_development_dependency 'bundler', '>= 2.2.10'
 	gem.add_development_dependency 'rake',    '>= 12.3.3'
 	gem.add_development_dependency 'rspec',   '>= 3.10.0'
 end
